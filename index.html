@@ -1,76 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Halaman HTML</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Saya</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+    /* Navbar */
+    nav {
+      background: #2c3e50;
+      color: #fff;
+      padding: 16px 0;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 24px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      padding: 48px 10%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .hero-text {
+      max-width: 60%;
+    }
+    .hero-text h1 {
+      font-size: 2.5em;
+      margin-bottom: 16px;
+    }
+    .hero-img img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #2c3e50;
+    }
+    /* About Me */
+    .about {
+      padding: 48px 10%;
+      background: #eaeaea;
+    }
+    .about h2 {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .about-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+    .about-box {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      padding: 24px;
+      width: 220px;
+      text-align: center;
+    }
+    .about-box h3 {
+      margin-bottom: 8px;
+      color: #2c3e50;
+    }
+    /* Portfolio */
+    .portfolio {
+      padding: 48px 10%;
+      background: #fff;
+    }
+    .portfolio h2 {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .portfolio-boxes {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .portfolio-box {
+      background: #eaeaea;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 24px;
+      width: 260px;
+      text-align: center;
+    }
+    .portfolio-box img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text, .hero-img {
+        max-width: 100%;
+      }
+      .about-boxes, .portfolio-boxes {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+    </ul>
+  </nav>
 
-  <!-- Section 1: Menu -->
-  <table border="1" width="100%">
-    <tr>
-      <td align="center"><b>Beranda</b></td>
-      <td align="center"><b>Tentang</b></td>
-      <td align="center"><b>Portofolio</b></td>
-      <td align="center"><b>Kontak</b></td>
-    </tr>
-  </table>
-  <br>
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-text">
+      <h1>Selamat Datang di Website Saya</h1>
+      <p>Ini adalah CV online saya. Silakan lihat informasi tentang saya dan portofolio saya di bawah ini.</p>
+    </div>
+    <div class="hero-img">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto Profil">
+    </div>
+  </section>
 
-  <!-- Section 2: Judul di kiri dan gambar di kanan -->
-  <table border="1" width="100%">
-    <tr>
-      <td width="70%">
-        <h2>Selamat Datang di Halaman Saya</h2>
-        <p>Ini adalah deskripsi singkat mengenai halaman ini.</p>
-      </td>
-      <td width="30%">
-        <img src="https://via.placeholder.com/200" alt="Gambar" width="100%">
-      </td>
-    </tr>
-  </table>
-  <br>
+  <!-- About Me -->
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <div class="about-boxes">
+      <div class="about-box">
+        <h3>Nama</h3>
+        <p>Faisal Aditya Siagian</p>
+      </div>
+      <div class="about-box">
+        <h3>Education</h3>
+        <p>S1 Teknik Sistem Informasi</p>
+      </div>
+      <div class="about-box">
+        <h3>Pekerjaan</h3>
+        <p>Web Developer</p>
+      </div>
+      <div class="about-box">
+        <h3>Email</h3>
+        <p>adityasiagian@email.com</p>
+      </div>
+      <div class="about-box">
+        <h3>Hobi</h3>
+        <p>Fotografi, Coding, Traveling</p>
+      </div>
+      <div class="about-box">
+        <h3>Alamat</h3>
+        <p>Temanggung</p>
+      </div>
+    </div>
+  </section>
 
-  <!-- Section 3: Biodata dengan 6 box -->
-  <table border="1" width="100%" id="section3">
-    <tr>
-      <td><b>Nama:</b> John Doe</td>
-      <td><b>Usia:</b> 25</td>
-      <td><b>Jenis Kelamin:</b> Laki-laki</td>
-    </tr>
-    <tr>
-      <td><b>Email:</b> john@example.com</td>
-      <td><b>Telepon:</b> 081234567890</td>
-      <td><b>Alamat:</b> Jakarta</td>
-    </tr>
-  </table>
-  <br>
-
-  <!-- Section 4: Portofolio -->
-  <table border="1" width="100%">
-    <tr>
-      <th colspan="2">Portofolio</th>
-    </tr>
-    <tr>
-      <td width="30%">
-        <img src="https://via.placeholder.com/150" alt="Project 1" width="100%">
-      </td>
-      <td>
-        <h3>Project 1</h3>
-        <p>Deskripsi singkat tentang project pertama.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <img src="https://via.placeholder.com/150" alt="Project 2" width="100%">
-      </td>
-      <td>
-        <h3>Project 2</h3>
-        <p>Deskripsi singkat tentang project kedua.</p>
-      </td>
-    </tr>
-  </table>
-
+  <!-- Portfolio -->
+  <section class="portfolio" id="portfolio">
+    <h2>Portofolio</h2>
+    <div class="portfolio-boxes">
+      <div class="portfolio-box">
+        <img src="https://source.unsplash.com/260x120/?website" alt="Project 1">
+        <h3>Website Company Profile</h3>
+        <p>Membuat website company profile untuk perusahaan teknologi.</p>
+      </div>
+      <div class="portfolio-box">
+        <img src="https://source.unsplash.com/260x120/?app" alt="Project 2">
+        <h3>Aplikasi Mobile</h3>
+        <p>Mengembangkan aplikasi mobile untuk manajemen tugas harian.</p>
+      </div>
+      <div class="portfolio-box">
+        <img src="https://source.unsplash.com/260x120/?dashboard" alt="Project 3">
+        <h3>Dashboard Admin</h3>
+        <p>Membuat dashboard admin untuk monitoring data secara real-time.</p>
+      </div>
+    </div>
+  </section>
 </body>
-</html>
+</html></div>
